@@ -20,7 +20,7 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
-          ehco "${{ github.token }}"
+          echo "${{ github.token }}"
           git clone git@github:$GITHUB_REPOSITORY
           git checkout $GITHUB_SHA
       - name: Checkout the repo
