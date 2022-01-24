@@ -17,3 +17,10 @@ jobs:
         run: |
           pwd
           ls
+      - name: Checkout the repo
+        uses: actions/checkout@v1
+
+      - name: Find the path and list files after checkout
+        run: |
+          pwd
+          ls
