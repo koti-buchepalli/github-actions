@@ -13,3 +13,5 @@ jobs:
           who-to-greet: Koti
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time }}"
+      - name: Find the path and list files
+        run: pwd && ls
