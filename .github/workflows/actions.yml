@@ -21,7 +21,7 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           ehco "${{ github.token }}"
-          git cone git@github:$GITHUB_REPOSITORY
+          git clone git@github:$GITHUB_REPOSITORY
           git checkout $GITHUB_SHA
       - name: Checkout the repo
         uses: actions/checkout@v1
