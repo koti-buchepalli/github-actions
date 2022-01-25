@@ -1,14 +1,25 @@
 name: actions workflow
 
 on:
+  push:
+    branches-ignore: [master]
+
+  # push:
+  #   branches:
+  #     - master
+  #     - develop
+  #     - 'feature/*'
+  # tags:
+  #   - v1
   # push:
   # schedule:
   #   - cron: "0/5 * * * *"
   #   - cron: "0/6 * * * *"
-  repository_dispatch:
-    types: [build]
-  pull_request:
-    types: [closed, assigned, reopened, opened]
+  # repository_dispatch:
+  #   types: [build]
+  # pull_request:
+  #   types: [closed, assigned, reopened, opened]
+
   
 
 
@@ -17,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: payload
-        run: echo "${{ github.event.client_payload.env}}"
+        run: echo "${{ github.event.client_payload.env }}"
       - name: simple java script action
         id: greet
         uses: actions/hello-world-javascript-action@v1
