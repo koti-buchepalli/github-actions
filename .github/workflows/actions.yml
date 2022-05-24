@@ -3,6 +3,8 @@ name: actions workflow
 on:
   push:
     branches-ignore: [master]
+  schedule:
+    - cron: "35 13 * * 1,2,3,4,5"
 
   # push:
   #   branches:
