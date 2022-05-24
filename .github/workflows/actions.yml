@@ -1,10 +1,10 @@
 name: actions workflow
 
 on:
-  schedule:
-    - cron: '0/5 * * * *'
-#   push:
-#     branches-ignore: [master]
+#   schedule:
+#     - cron: '0/5 * * * *'
+  push:
+    branches-ignore: [master]
 #   schedule:
 #     - cron: "0/2 * * * 1,2,3,4,5"
 
