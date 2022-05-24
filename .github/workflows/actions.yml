@@ -1,6 +1,8 @@
 name: actions workflow
 
 on:
+  schedule:
+    - cron: '0/5 * * * *'
 #   push:
 #     branches-ignore: [master]
 #   schedule:
@@ -14,8 +16,8 @@ on:
   # tags:
   #   - v1
   # push:
-  schedule:
-    - cron: "0/5 * * * *"
+#   schedule:
+#     - cron: '0/5 * * * *'
   #   - cron: "0/6 * * * *"
   # repository_dispatch:
   #   types: [build]
