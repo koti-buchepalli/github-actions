@@ -42,7 +42,9 @@ jobs:
           echo ${{ github.ref }}
           git fetch --prune --unshallow --tags
       - name: tags
-        run: git tag -l
+        run: 
+          git tag -l
+          echo ${{ github.ref }}
         
 #       - name: payload
 #         run: echo "${{ github.event.client_payload.env }}"
