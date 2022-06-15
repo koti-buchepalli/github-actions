@@ -32,10 +32,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        if: github.ref == 'refs/heads/develop' 
+#         if: github.ref == 'refs/heads/develop' 
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+#         with:
+#           fetch-depth: 0
           
       - name: checking
         run: |
