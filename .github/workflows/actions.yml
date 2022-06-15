@@ -34,11 +34,15 @@ jobs:
       - name: checkout
 #         if: github.ref == 'refs/heads/develop' 
         uses: actions/checkout@v2
-          
+        
+      - name: tags before
+        run: git tag -l
       - name: checking
         run: |
           git fetch --prune --unshallow --tags
-          git tag -l
+      - name: tags
+        run: git tag -l
+        
 #       - name: payload
 #         run: echo "${{ github.event.client_payload.env }}"
 #       - name: simple java script action
