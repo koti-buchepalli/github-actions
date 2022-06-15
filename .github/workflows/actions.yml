@@ -39,6 +39,7 @@ jobs:
         run: git tag -l
       - name: checking
         run: |
+          echo $github.ref
           git fetch --prune --unshallow --tags
       - name: tags
         run: git tag -l
