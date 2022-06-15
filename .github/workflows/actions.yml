@@ -31,9 +31,12 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-#       - name: checkout specific branch
-#         if: github.ref == 'refs/heads/develop'
-      - uses: actions/checkout@v2
+      - name: checkout
+        if: github.ref != 'refs/heads/develop' 
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
       - name: checking
         run: |
           git tag
@@ -62,4 +65,3 @@ jobs:
 #       - name: Find the path and list files after checkout
 #         run: |
 #           pwd
-          ls -a
