@@ -39,7 +39,7 @@ jobs:
           
       - name: checking
         run: |
-          git tag
+          git tag -l
 #       - name: payload
 #         run: echo "${{ github.event.client_payload.env }}"
 #       - name: simple java script action
