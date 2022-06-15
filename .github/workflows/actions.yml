@@ -3,16 +3,16 @@ name: actions workflow
 on:
 #   schedule:
 #     - cron: '0/5 * * * *'
-  push:
-    branches-ignore: [master]
+#   push:
+#     branches-ignore: [master]
 #   schedule:
 #     - cron: "0/2 * * * 1,2,3,4,5"
 
-  # push:
-  #   branches:
-  #     - master
-  #     - develop
-  #     - 'feature/*'
+  push:
+    branches:
+      - master
+      - develop
+      - 'feature/*'
   # tags:
   #   - v1
   # push:
