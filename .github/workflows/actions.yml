@@ -21,8 +21,8 @@ on:
   #   - cron: "0/6 * * * *"
   # repository_dispatch:
   #   types: [build]
-  # pull_request:
-  #   types: [closed, assigned, reopened, opened]
+  pull_request:
+    types: [closed, assigned, reopened, opened]
 
   
 
